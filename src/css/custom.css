@@ -17,8 +17,11 @@
   --kb-sidebar-active-text: #173f4a;
   --kb-sidebar-accent: #2b5c6b;
   --kb-sidebar-level-line: #c8d6de;
-  --kb-sidebar-section-bg: #edf4f7;
-  --kb-sidebar-section-border: #c3d4dc;
+  --kb-sidebar-section-bg: #dcecf1;
+  --kb-sidebar-section-border: #9db7c3;
+  --kb-sidebar-child-bg: #ffffff;
+  --kb-sidebar-toggle-bg: #2b5c6b;
+  --kb-sidebar-toggle-text: #ffffff;
 }
 
 [data-theme='dark'] {
@@ -39,8 +42,11 @@
   --kb-sidebar-active-text: #d7f3f8;
   --kb-sidebar-accent: #7cc7d8;
   --kb-sidebar-level-line: #3a4a5c;
-  --kb-sidebar-section-bg: #172231;
-  --kb-sidebar-section-border: #34485c;
+  --kb-sidebar-section-bg: #1d3141;
+  --kb-sidebar-section-border: #496276;
+  --kb-sidebar-child-bg: #111827;
+  --kb-sidebar-toggle-bg: #7cc7d8;
+  --kb-sidebar-toggle-text: #0f1f2a;
 }
 
 .navbar {
@@ -55,10 +61,12 @@
 .theme-doc-sidebar-container {
   background: var(--kb-sidebar-bg);
   border-right: 1px solid var(--kb-sidebar-border);
+  position: relative;
+  width: 320px !important;
 }
 
 .theme-doc-sidebar-menu {
-  padding: 0.9rem 0.75rem 1.35rem;
+  padding: 0.95rem 0.85rem 1.35rem;
 }
 
 .theme-doc-sidebar-menu .menu__list {
@@ -66,15 +74,15 @@
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list {
-  margin-top: 0.35rem;
-  margin-bottom: 0.45rem;
-  margin-left: 1.05rem;
-  padding-left: 1.05rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0.65rem;
+  margin-left: 0.6rem;
+  padding-left: 1.25rem;
   border-left: 2px solid var(--kb-sidebar-level-line);
 }
 
 .theme-doc-sidebar-menu .menu__list-item {
-  margin-top: 0.18rem;
+  margin-top: 0.22rem;
 }
 
 .theme-doc-sidebar-menu .menu__link,
@@ -86,7 +94,7 @@
 }
 
 .theme-doc-sidebar-menu .menu__link {
-  padding: 0.42rem 0.55rem;
+  padding: 0.46rem 0.6rem;
 }
 
 .theme-doc-sidebar-menu .menu__list-item-collapsible {
@@ -103,12 +111,13 @@
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
   background: var(--kb-sidebar-section-bg);
   border: 1px solid var(--kb-sidebar-section-border);
+  border-left: 5px solid var(--kb-sidebar-accent);
   color: var(--kb-sidebar-active-text);
-  font-size: 0.8rem;
-  font-weight: 760;
-  letter-spacing: 0.045em;
-  margin-top: 0.75rem;
-  padding: 0.55rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  margin-top: 1rem;
+  padding: 0.62rem 0.7rem;
   text-transform: uppercase;
 }
 
@@ -119,8 +128,10 @@
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list-item-collapsible .menu__link {
-  font-size: 0.9rem;
-  font-weight: 620;
+  background: var(--kb-sidebar-child-bg);
+  border: 1px solid transparent;
+  font-size: 0.88rem;
+  font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -128,7 +139,7 @@
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__link,
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   color: var(--kb-sidebar-text);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 560;
 }
 
@@ -140,8 +151,8 @@
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list {
-  margin-left: 1rem;
-  padding-left: 1.05rem;
+  margin-left: 0.75rem;
+  padding-left: 1.15rem;
   border-left-style: dashed;
 }
 
@@ -154,6 +165,7 @@
 .theme-doc-sidebar-menu .menu__link--active,
 .theme-doc-sidebar-menu .menu__list-item-collapsible--active {
   background: var(--kb-sidebar-active-bg);
+  border-color: var(--kb-sidebar-section-border);
   color: var(--kb-sidebar-active-text);
   font-weight: 650;
 }
@@ -164,6 +176,37 @@
 
 .theme-doc-sidebar-menu .menu__caret::before {
   opacity: 0.55;
+}
+
+.theme-doc-sidebar-container button[class*='collapseSidebarButton'],
+.theme-doc-sidebar-container button[class*='toggleButton'],
+.theme-doc-sidebar-container button[title*='Collapse'],
+.theme-doc-sidebar-container button[aria-label*='Collapse'] {
+  align-items: center;
+  background: var(--kb-sidebar-toggle-bg);
+  border: 1px solid var(--kb-sidebar-toggle-bg);
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+  color: var(--kb-sidebar-toggle-text);
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  min-width: 34px;
+  opacity: 0.9;
+  padding: 0;
+  position: fixed;
+  left: 320px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 34px;
+  z-index: 30;
+}
+
+.theme-doc-sidebar-container button[class*='collapseSidebarButton']:hover,
+.theme-doc-sidebar-container button[class*='toggleButton']:hover,
+.theme-doc-sidebar-container button[title*='Collapse']:hover,
+.theme-doc-sidebar-container button[aria-label*='Collapse']:hover {
+  opacity: 1;
 }
 
 .table-of-contents {
