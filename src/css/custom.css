@@ -17,6 +17,8 @@
   --kb-sidebar-active-text: #173f4a;
   --kb-sidebar-accent: #2b5c6b;
   --kb-sidebar-level-line: #c8d6de;
+  --kb-sidebar-section-bg: #edf4f7;
+  --kb-sidebar-section-border: #c3d4dc;
 }
 
 [data-theme='dark'] {
@@ -37,6 +39,8 @@
   --kb-sidebar-active-text: #d7f3f8;
   --kb-sidebar-accent: #7cc7d8;
   --kb-sidebar-level-line: #3a4a5c;
+  --kb-sidebar-section-bg: #172231;
+  --kb-sidebar-section-border: #34485c;
 }
 
 .navbar {
@@ -54,7 +58,7 @@
 }
 
 .theme-doc-sidebar-menu {
-  padding: 0.75rem 0.65rem 1.25rem;
+  padding: 0.9rem 0.75rem 1.35rem;
 }
 
 .theme-doc-sidebar-menu .menu__list {
@@ -62,14 +66,15 @@
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list {
-  margin-top: 0.18rem;
-  margin-left: 0.65rem;
-  padding-left: 0.9rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.45rem;
+  margin-left: 1.05rem;
+  padding-left: 1.05rem;
   border-left: 2px solid var(--kb-sidebar-level-line);
 }
 
 .theme-doc-sidebar-menu .menu__list-item {
-  margin-top: 0.12rem;
+  margin-top: 0.18rem;
 }
 
 .theme-doc-sidebar-menu .menu__link,
@@ -96,11 +101,20 @@
 
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
-  color: var(--kb-sidebar-muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  background: var(--kb-sidebar-section-bg);
+  border: 1px solid var(--kb-sidebar-section-border);
+  color: var(--kb-sidebar-active-text);
+  font-size: 0.8rem;
+  font-weight: 760;
+  letter-spacing: 0.045em;
+  margin-top: 0.75rem;
+  padding: 0.55rem 0.65rem;
   text-transform: uppercase;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item:first-child > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item:first-child > .menu__list-item-collapsible .menu__link {
+  margin-top: 0;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
@@ -126,14 +140,14 @@
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list {
-  margin-left: 0.85rem;
-  padding-left: 1rem;
+  margin-left: 1rem;
+  padding-left: 1.05rem;
   border-left-style: dashed;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list {
-  margin-left: 0.7rem;
-  padding-left: 0.9rem;
+  margin-left: 0.9rem;
+  padding-left: 1rem;
   border-left-width: 1px;
 }
 
