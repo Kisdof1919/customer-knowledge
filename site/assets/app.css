@@ -1,0 +1,65 @@
+﻿:root {
+  --bg: #f6f8fa;
+  --panel: #ffffff;
+  --panel-soft: #eef4f6;
+  --line: #d8e1e7;
+  --text: #111827;
+  --muted: #607080;
+  --brand: #245a68;
+  --active: #d7ebee;
+  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: Arial, "Segoe UI", sans-serif; margin: 0; }
+.app-shell { display: grid; grid-template-columns: 330px minmax(0, 1fr); min-height: 100vh; }
+.sidebar { background: var(--panel); border-right: 1px solid var(--line); height: 100vh; overflow: auto; padding: 18px 14px; position: sticky; top: 0; }
+.sidebar-header { align-items: flex-start; display: flex; gap: 10px; margin-bottom: 16px; }
+.sidebar-header h1 { font-size: 16px; line-height: 1.2; margin: 0 0 4px; }
+.sidebar-header p { color: var(--muted); font-size: 12px; margin: 0; }
+.sidebar-toggle { align-items: center; background: var(--brand); border: 0; border-radius: 4px; color: #fff; cursor: pointer; display: inline-flex; font-size: 16px; height: 28px; justify-content: center; width: 30px; }
+.search-box { display: block; margin-bottom: 14px; }
+.search-box span { color: var(--muted); display: block; font-size: 12px; margin-bottom: 5px; }
+.search-box input { border: 1px solid var(--line); border-radius: 4px; font-size: 13px; outline: 0; padding: 9px 10px; width: 100%; }
+.search-box input:focus { border-color: var(--brand); }
+.tree-list { list-style: none; margin: 0; padding: 0; }
+.tree-list .tree-list { margin-left: 20px; }
+.tree-item { margin: 2px 0; }
+.tree-row { align-items: center; background: transparent; border: 0; border-radius: 4px; color: var(--text); cursor: pointer; display: flex; font-size: 13px; gap: 5px; line-height: 1.25; min-height: 28px; padding: 5px 6px; text-align: left; width: 100%; }
+.tree-row:hover { background: var(--panel-soft); }
+.tree-row.active { background: var(--active); color: #123946; font-weight: 700; }
+.tree-row.level-0 { background: var(--panel-soft); border-left: 4px solid #8fb0bd; color: #123946; font-size: 14px; font-weight: 800; margin-top: 8px; padding-left: 7px; }
+.tree-row.level-1 { font-size: 13px; font-weight: 700; }
+.tree-row.level-2 { color: #263b4c; font-size: 12.5px; font-weight: 600; }
+.tree-row.level-3, .tree-row.level-4 { color: var(--muted); font-size: 12px; }
+.caret { color: #7a8792; display: inline-block; flex: 0 0 12px; font-size: 12px; line-height: 1; transform: rotate(0deg); }
+.tree-row.open .caret { transform: rotate(90deg); }
+.tree-row.leaf .caret { visibility: hidden; }
+.content { min-width: 0; padding: 28px; }
+.mobile-bar { display: none; }
+.article { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); margin: 0 auto; max-width: 980px; min-height: calc(100vh - 56px); padding: 30px; }
+.article h2 { font-size: 24px; margin: 0 0 8px; }
+.article h3 { border-bottom: 1px solid var(--line); font-size: 17px; margin: 28px 0 12px; padding-bottom: 8px; }
+.article p, .article li, .article td, .article th { font-size: 14px; line-height: 1.6; }
+.article .meta { color: var(--muted); margin: 0 0 20px; }
+.download-list { display: grid; gap: 10px; margin-top: 10px; }
+.download-card { align-items: center; border: 1px solid var(--line); border-radius: 5px; display: flex; gap: 12px; justify-content: space-between; padding: 12px; }
+.download-card strong { display: block; font-size: 14px; margin-bottom: 3px; }
+.download-card span { color: var(--muted); font-size: 12px; }
+.download-card a { background: var(--brand); border-radius: 4px; color: #fff; flex: 0 0 auto; font-size: 13px; padding: 8px 10px; text-decoration: none; }
+table { border-collapse: collapse; width: 100%; }
+td, th { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+th { background: var(--panel-soft); }
+.empty { color: var(--muted); font-style: italic; }
+.sidebar-collapsed .app-shell { grid-template-columns: 0 minmax(0, 1fr); }
+.sidebar-collapsed .sidebar { border-right: 0; padding: 0; width: 0; }
+.sidebar-collapsed .sidebar > * { display: none; }
+@media (max-width: 760px) {
+  .app-shell { display: block; }
+  .sidebar { bottom: 0; box-shadow: var(--shadow); height: 100vh; left: 0; max-width: 88vw; position: fixed; top: 0; transform: translateX(0); width: 320px; z-index: 20; }
+  .sidebar-collapsed .sidebar { transform: translateX(-105%); width: 320px; }
+  .sidebar-collapsed .sidebar > * { display: block; }
+  .content { padding: 0; }
+  .mobile-bar { align-items: center; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; gap: 10px; padding: 10px; position: sticky; top: 0; z-index: 10; }
+  .article { border: 0; border-radius: 0; box-shadow: none; min-height: calc(100vh - 49px); padding: 20px; }
+}

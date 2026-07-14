@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Knowledge Base</title>
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Toggle sidebar">â˜°</button>
+          <div>
+            <h1>Customer Knowledge Base</h1>
+            <p>Case answers and downloadable guides</p>
+          </div>
+        </div>
+        <label class="search-box">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Search by title, product, or keyword" autocomplete="off" />
+        </label>
+        <nav class="tree" id="tree" aria-label="Knowledge base navigation"></nav>
+      </aside>
+      <main class="content">
+        <div class="mobile-bar">
+          <button class="sidebar-toggle" id="mobileSidebarToggle" type="button" aria-label="Toggle sidebar">â˜°</button>
+          <strong>Customer Knowledge Base</strong>
+        </div>
+        <section class="article" id="article"></section>
+      </main>
+    </div>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

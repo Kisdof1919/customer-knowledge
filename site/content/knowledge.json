@@ -1,0 +1,139 @@
+﻿{
+  "tree": [
+    {
+      "id": "home",
+      "title": "Customer Knowledge Base",
+      "summary": "Search customer-facing how-to documents and troubleshooting notes.",
+      "keywords": ["knowledge base", "support", "case"],
+      "sections": [
+        {
+          "title": "How to use this site",
+          "html": "<p>Use the search box or expand the tree on the left. How-to pages provide downloadable guides. Troubleshooting pages provide concise symptoms and suggestions.</p>"
+        }
+      ],
+      "children": [
+        {
+          "id": "how-to",
+          "title": "How-to",
+          "summary": "Downloadable guides grouped by product area.",
+          "keywords": ["guide", "download", "pdf"],
+          "children": [
+            {
+              "id": "how-to-cctv",
+              "title": "CCTV",
+              "summary": "CCTV how-to guides.",
+              "downloads": [
+                { "title": "Configure Line Crossing in NVR GUI 5.0", "type": "PDF", "href": "files/how-to/configure-line-crossing-in-nvr-gui-5.pdf" },
+                { "title": "Use Thermal Design Tool", "type": "PDF", "href": "files/how-to/use-thermal-design-tool.pdf" }
+              ]
+            },
+            {
+              "id": "how-to-hc-hpp",
+              "title": "HC/HPP",
+              "summary": "Hik-Connect and Hik-Partner Pro how-to guides.",
+              "downloads": [
+                { "title": "Get an Authorization Code in HPP", "type": "PDF", "href": "files/how-to/how-to-get-authorization-code-in-hpp.pdf" },
+                { "title": "Submit Password and Unbind Case in EU", "type": "PDF", "href": "files/how-to/three-ways-to-submit-password-and-unbind-case-eu.pdf" }
+              ]
+            },
+            {
+              "id": "how-to-access-control",
+              "title": "Access Control",
+              "summary": "Access control how-to guides.",
+              "downloads": [
+                { "title": "Connect Card Reader to Villa Door Station", "type": "PDF", "href": "files/how-to/connect-card-reader-to-villa-door-station.pdf" }
+              ]
+            },
+            {
+              "id": "how-to-alarm",
+              "title": "Alarm",
+              "summary": "Alarm how-to guides.",
+              "sections": [{ "title": "Documents", "html": "<p class=\"empty\">Documents will be added here.</p>" }]
+            }
+          ]
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Troubleshooting",
+          "summary": "Troubleshooting notes grouped by product line.",
+          "keywords": ["troubleshooting", "issue", "solution"],
+          "children": [
+            {
+              "id": "troubleshooting-cctv",
+              "title": "CCTV (T)",
+              "summary": "CCTV troubleshooting.",
+              "children": [
+                {
+                  "id": "troubleshooting-cctv-frontends",
+                  "title": "Front-Ends",
+                  "children": [
+                    { "id": "troubleshooting-cctv-frontends-123", "title": "1/2/3 Series" },
+                    { "id": "troubleshooting-cctv-frontends-45678", "title": "4/5/6/7/8 Series" },
+                    { "id": "troubleshooting-cctv-frontends-ptz", "title": "PTZ" },
+                    { "id": "troubleshooting-cctv-frontends-analog", "title": "Analog Camera" }
+                  ]
+                },
+                { "id": "troubleshooting-cctv-thermal", "title": "Thermal" },
+                {
+                  "id": "troubleshooting-cctv-backends",
+                  "title": "Back-Ends",
+                  "children": [
+                    {
+                      "id": "troubleshooting-cctv-backends-nvr",
+                      "title": "NVR",
+                      "children": [
+                        {
+                          "id": "troubleshooting-nvr-time",
+                          "title": "NVR Time Issue",
+                          "summary": "Symptoms and suggestions for NVR time reset or 1970 time issues.",
+                          "keywords": ["nvr", "time", "1970", "cmos", "battery", "chip"],
+                          "sections": [
+                            {
+                              "title": "Symptoms and Suggestions",
+                              "html": "<table><thead><tr><th>Symptom</th><th>Suggestion</th></tr></thead><tbody><tr><td>The time can be saved manually, but changes to 1970 after reboot.</td><td>Try replacing the CMOS battery.</td></tr><tr><td>The time cannot be saved correctly and always stays at 1970.</td><td>The chip may be aging.</td></tr></tbody></table>"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    { "id": "troubleshooting-cctv-backends-dvr", "title": "DVR" },
+                    { "id": "troubleshooting-cctv-backends-analog", "title": "Analog Camera" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "troubleshooting-non-video",
+              "title": "Non-Video (T)",
+              "children": [
+                { "id": "troubleshooting-speed-gates", "title": "Speed Gates and Turnstiles" },
+                { "id": "troubleshooting-video-intercom", "title": "Video Intercom" },
+                { "id": "troubleshooting-alarm", "title": "Alarm" },
+                { "id": "troubleshooting-access-control", "title": "Access Control" }
+              ]
+            },
+            {
+              "id": "troubleshooting-display-control",
+              "title": "Display & Control",
+              "children": [
+                { "id": "troubleshooting-decoder", "title": "Decoder" },
+                { "id": "troubleshooting-video-controller", "title": "Video Controller" },
+                { "id": "troubleshooting-keyboard", "title": "Keyboard" },
+                { "id": "troubleshooting-led", "title": "LED & Control System" }
+              ]
+            },
+            {
+              "id": "troubleshooting-cloud-software",
+              "title": "Cloud Software",
+              "children": [
+                { "id": "troubleshooting-hik-connect-team", "title": "Hik-Connect Team" },
+                { "id": "troubleshooting-hik-connect-personal", "title": "Hik-Connect Personal" },
+                { "id": "troubleshooting-hik-partner-pro", "title": "Hik-Partner Pro" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
