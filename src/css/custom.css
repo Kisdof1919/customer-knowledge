@@ -151,6 +151,12 @@
   padding-top: 0.42rem !important;
 }
 
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link--active,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible--active .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link--active {
+  font-weight: 750 !important;
+}
+
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   font-size: 0.8rem !important;
