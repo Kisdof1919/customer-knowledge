@@ -78,19 +78,35 @@
 .theme-doc-sidebar-menu .menu__list .menu__list {
   border-left: 0 !important;
   margin: 0 !important;
-  padding-left: 1.35rem !important;
+  padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list {
-  padding-left: 1.35rem !important;
+  padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list {
-  padding-left: 1.35rem !important;
+  padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list-item {
   margin: 0.08rem 0 !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item {
+  padding-left: 0 !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
+  padding-left: 1.35rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
+  padding-left: 2.7rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
+  padding-left: 4.05rem !important;
 }
 
 .theme-doc-sidebar-menu .menu__link,
@@ -152,13 +168,21 @@
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   font-size: 0.8rem !important;
-  font-weight: 450 !important;
+  font-weight: 520 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__link,
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   color: var(--kb-sidebar-muted) !important;
   font-size: 0.78rem !important;
+  font-weight: 450 !important;
+}
+
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list .menu__link,
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
+  color: var(--kb-sidebar-muted) !important;
+  font-size: 0.76rem !important;
+  font-weight: 430 !important;
 }
 
 .theme-doc-sidebar-menu .menu__link:hover,
