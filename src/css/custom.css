@@ -75,19 +75,16 @@
   padding-left: 0 !important;
 }
 
-.theme-doc-sidebar-menu .menu__list .menu__list {
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible + .menu__list {
+  border-left: 0 !important;
+  margin: 0 0 0 1.15rem !important;
+  padding-left: 0 !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list {
   border-left: 0 !important;
   margin: 0 0 0 1.25rem !important;
-  padding-left: 0 !important;
-}
-
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list {
-  margin-left: 1.25rem !important;
-  padding-left: 0 !important;
-}
-
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list {
-  margin-left: 1.25rem !important;
   padding-left: 0 !important;
 }
 
@@ -138,17 +135,30 @@
 }
 
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible,
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
   background: var(--kb-sidebar-section-bg) !important;
   border-left: 4px solid var(--kb-sidebar-section-border) !important;
   border-radius: 3px !important;
   color: var(--kb-sidebar-active-text) !important;
-  font-size: 0.86rem !important;
+  font-size: 0.9rem !important;
   font-weight: 750 !important;
   margin-top: 0.35rem !important;
   padding-bottom: 0.42rem !important;
   padding-left: 0.45rem !important;
   padding-top: 0.42rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible {
+  align-items: center !important;
+  display: flex !important;
+  padding: 0 !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
+  border-left: 0 !important;
+  margin-top: 0 !important;
+  padding-left: 0.15rem !important;
 }
 
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link--active,
@@ -157,21 +167,21 @@
   font-weight: 750 !important;
 }
 
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list-item-collapsible .menu__link {
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list-item-collapsible .menu__link {
   font-size: 0.8rem !important;
   font-weight: 520 !important;
 }
 
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__link,
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   color: var(--kb-sidebar-muted) !important;
   font-size: 0.78rem !important;
   font-weight: 450 !important;
 }
 
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list .menu__link,
-.theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list .menu__list .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list .menu__list .menu__list-item-collapsible .menu__link {
   color: var(--kb-sidebar-muted) !important;
   font-size: 0.76rem !important;
   font-weight: 430 !important;
@@ -186,13 +196,6 @@
   background: var(--kb-sidebar-active-bg) !important;
   color: var(--kb-sidebar-active-text) !important;
   font-weight: 650 !important;
-}
-
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible {
-  background: var(--kb-sidebar-section-bg) !important;
-  border-left: 4px solid var(--kb-sidebar-section-border) !important;
-  border-radius: 3px !important;
-  margin-top: 0.35rem !important;
 }
 
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
