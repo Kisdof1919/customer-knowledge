@@ -212,3 +212,134 @@
 .table-of-contents {
   font-size: 0.86rem;
 }
+
+/* Tree-style sidebar overrides. Keep the left navigation compact and
+   make parent-child relationships visible through indentation. */
+.theme-doc-sidebar-container {
+  width: 300px !important;
+}
+
+.theme-doc-sidebar-menu {
+  padding: 0.75rem 0.65rem 1.25rem !important;
+}
+
+.theme-doc-sidebar-menu,
+.theme-doc-sidebar-menu .menu__link,
+.theme-doc-sidebar-menu .menu__list-item-collapsible {
+  font-size: 0.82rem !important;
+  line-height: 1.28 !important;
+}
+
+.theme-doc-sidebar-menu .menu__list {
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
+
+.theme-doc-sidebar-menu .menu__list-item {
+  margin: 0.1rem 0 !important;
+}
+
+.theme-doc-sidebar-menu .menu__link,
+.theme-doc-sidebar-menu .menu__list-item-collapsible {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  color: var(--kb-sidebar-text) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  min-height: 0 !important;
+  padding-bottom: 0.32rem !important;
+  padding-top: 0.32rem !important;
+  text-transform: none !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
+  color: var(--kb-sidebar-active-text) !important;
+  font-size: 0.84rem !important;
+  font-weight: 650 !important;
+  margin-top: 0.35rem !important;
+  padding-left: 0.35rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item:first-child > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item:first-child > .menu__list-item-collapsible .menu__link {
+  margin-top: 0 !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list {
+  border-left: 1px solid var(--kb-sidebar-level-line) !important;
+  margin-left: 0.7rem !important;
+  margin-top: 0.12rem !important;
+  padding-left: 1.15rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list .menu__list-item-collapsible .menu__link {
+  font-size: 0.8rem !important;
+  font-weight: 450 !important;
+  padding-left: 0.35rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list {
+  border-left: 1px dashed var(--kb-sidebar-level-line) !important;
+  margin-left: 0.65rem !important;
+  margin-top: 0.12rem !important;
+  padding-left: 1rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list .menu__list-item-collapsible .menu__link {
+  color: var(--kb-sidebar-muted) !important;
+  font-size: 0.78rem !important;
+  font-weight: 430 !important;
+}
+
+.theme-doc-sidebar-menu .menu__link:hover,
+.theme-doc-sidebar-menu .menu__list-item-collapsible:hover {
+  background: var(--kb-sidebar-hover) !important;
+}
+
+.theme-doc-sidebar-menu .menu__link--active {
+  background: var(--kb-sidebar-active-bg) !important;
+  box-shadow: none !important;
+  color: var(--kb-sidebar-active-text) !important;
+  font-weight: 650 !important;
+}
+
+.theme-doc-sidebar-menu .menu__caret {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
+
+.theme-doc-sidebar-menu .menu__caret::before {
+  opacity: 0.45 !important;
+  transform: scale(0.72) !important;
+}
+
+button[class*='collapseSidebarButton'],
+button[title*='Collapse'],
+button[aria-label*='Collapse'],
+button[class*='expandButton'],
+button[title*='Expand'],
+button[aria-label*='Expand'] {
+  align-items: center !important;
+  background: var(--kb-sidebar-toggle-bg) !important;
+  border: 1px solid var(--kb-sidebar-toggle-bg) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18) !important;
+  color: var(--kb-sidebar-toggle-text) !important;
+  display: flex !important;
+  height: 30px !important;
+  justify-content: center !important;
+  min-width: 30px !important;
+  opacity: 0.9 !important;
+  padding: 0 !important;
+  position: fixed !important;
+  left: 300px !important;
+  top: 50% !important;
+  transform: translate(50%, -50%) !important;
+  width: 30px !important;
+  z-index: 100 !important;
+}
