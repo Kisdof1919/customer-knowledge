@@ -15,6 +15,8 @@
   --kb-sidebar-hover: #eef4f7;
   --kb-sidebar-active-bg: #dcecef;
   --kb-sidebar-active-text: #123946;
+  --kb-sidebar-section-bg: #e8f1f4;
+  --kb-sidebar-section-border: #8fb0bd;
   --kb-sidebar-toggle-bg: #2b5c6b;
   --kb-sidebar-toggle-text: #ffffff;
 }
@@ -35,6 +37,8 @@
   --kb-sidebar-hover: #1b2938;
   --kb-sidebar-active-bg: #173747;
   --kb-sidebar-active-text: #d7f3f8;
+  --kb-sidebar-section-bg: #192938;
+  --kb-sidebar-section-border: #4b7280;
   --kb-sidebar-toggle-bg: #7cc7d8;
   --kb-sidebar-toggle-text: #0f1f2a;
 }
@@ -133,9 +137,16 @@
 
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
 .theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link {
+  background: var(--kb-sidebar-section-bg) !important;
+  border-left: 4px solid var(--kb-sidebar-section-border) !important;
+  border-radius: 3px !important;
   color: var(--kb-sidebar-active-text) !important;
-  font-size: 0.84rem !important;
-  font-weight: 650 !important;
+  font-size: 0.86rem !important;
+  font-weight: 750 !important;
+  margin-top: 0.35rem !important;
+  padding-bottom: 0.42rem !important;
+  padding-left: 0.45rem !important;
+  padding-top: 0.42rem !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__link,
@@ -163,7 +174,7 @@
 
 .theme-doc-sidebar-menu .menu__link--active::before {
   color: var(--kb-sidebar-active-text);
-  content: '›';
+  content: '>';
   display: inline-block;
   font-size: 0.85rem;
   margin-right: 0.28rem;
