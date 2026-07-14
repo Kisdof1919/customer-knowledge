@@ -77,36 +77,22 @@
 
 .theme-doc-sidebar-menu .menu__list .menu__list {
   border-left: 0 !important;
-  margin: 0 !important;
+  margin: 0 0 0 1.25rem !important;
   padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list {
+  margin-left: 1.25rem !important;
   padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list .menu__list .menu__list .menu__list {
+  margin-left: 1.25rem !important;
   padding-left: 0 !important;
 }
 
 .theme-doc-sidebar-menu .menu__list-item {
   margin: 0.08rem 0 !important;
-}
-
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item {
-  padding-left: 0 !important;
-}
-
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
-  padding-left: 1.35rem !important;
-}
-
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
-  padding-left: 2.7rem !important;
-}
-
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item > .menu__list > .menu__list-item {
-  padding-left: 4.05rem !important;
 }
 
 .theme-doc-sidebar-menu .menu__link,
@@ -194,14 +180,6 @@
   background: var(--kb-sidebar-active-bg) !important;
   color: var(--kb-sidebar-active-text) !important;
   font-weight: 650 !important;
-}
-
-.theme-doc-sidebar-menu .menu__link--active::before {
-  color: var(--kb-sidebar-active-text);
-  content: '>';
-  display: inline-block;
-  font-size: 0.85rem;
-  margin-right: 0.28rem;
 }
 
 .theme-doc-sidebar-container button[class*='collapseSidebar'],
