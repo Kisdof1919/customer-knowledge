@@ -188,6 +188,22 @@
   font-weight: 650 !important;
 }
 
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible {
+  background: var(--kb-sidebar-section-bg) !important;
+  border-left: 4px solid var(--kb-sidebar-section-border) !important;
+  border-radius: 3px !important;
+  margin-top: 0.35rem !important;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link--active,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible .menu__link--active {
+  color: var(--kb-sidebar-active-text) !important;
+  font-weight: 750 !important;
+}
+
 .theme-doc-sidebar-container button[class*='collapseSidebar'],
 button[class*='expandButton'],
 button[title*='Collapse'],
