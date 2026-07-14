@@ -8,14 +8,20 @@
 const treeEl = document.getElementById("tree");
 const articleEl = document.getElementById("article");
 const searchInput = document.getElementById("searchInput");
+const searchStatus = document.getElementById("searchStatus");
 const sidebarToggle = document.getElementById("sidebarToggle");
 const mobileSidebarToggle = document.getElementById("mobileSidebarToggle");
+const railToggle = document.getElementById("railToggle");
 
 function normalize(value) { return String(value || "").toLowerCase(); }
 function nodeMatches(node, query) {
   if (!query) return true;
   const haystack = [node.title, node.summary, ...(node.keywords || [])].map(normalize).join(" ");
   return haystack.includes(query) || (node.children || []).some((child) => nodeMatches(child, query));
+}
+function countMatches(nodes, query) {
+  if (!query) return 0;
+  return nodes.reduce((total, node) => total + (nodeMatches(node, query) ? 1 : 0) + countMatches(node.children || [], query), 0);
 }
 function findNode(nodes, id) {
   for (const node of nodes) {
@@ -24,6 +30,9 @@ function findNode(nodes, id) {
     if (found) return found;
   }
   return null;
+}
+function collectDownloads(node) {
+  return [...(node.downloads || []), ...(node.children || []).flatMap(collectDownloads)];
 }
 function renderNodeList(nodes, level, query) {
   const ul = document.createElement("ul");
@@ -37,12 +46,10 @@ function renderNodeList(nodes, level, query) {
     const row = document.createElement("button");
     row.type = "button";
     row.className = `tree-row level-${Math.min(level, 4)}${state.activeId === node.id ? " active" : ""}${isOpen ? " open" : ""}${hasChildren ? "" : " leaf"}`;
-    row.innerHTML = `<span class="caret">â€º</span><span>${node.title}</span>`;
+    row.innerHTML = `<span class="caret">&gt;</span><span>${node.title}</span>`;
     row.addEventListener("click", () => {
       state.activeId = node.id;
-      if (hasChildren) {
-        state.openIds[state.openIds.has(node.id) ? "delete" : "add"](node.id);
-      }
+      if (hasChildren) state.openIds[state.openIds.has(node.id) ? "delete" : "add"](node.id);
       renderTree();
       renderArticle();
       if (window.innerWidth <= 760) document.body.classList.add("sidebar-collapsed");
@@ -54,8 +61,15 @@ function renderNodeList(nodes, level, query) {
   return ul;
 }
 function renderTree() {
+  const query = normalize(state.query.trim());
   treeEl.innerHTML = "";
-  treeEl.appendChild(renderNodeList(state.data.tree, 0, normalize(state.query.trim())));
+  const matchCount = countMatches(state.data.tree, query);
+  searchStatus.textContent = query ? `${matchCount} matching items` : "";
+  if (query && matchCount === 0) {
+    treeEl.innerHTML = '<p class="empty">No matching items.</p>';
+    return;
+  }
+  treeEl.appendChild(renderNodeList(state.data.tree, 0, query));
 }
 function renderDownloads(downloads = []) {
   if (!downloads.length) return "";
@@ -64,13 +78,14 @@ function renderDownloads(downloads = []) {
 function renderArticle() {
   const node = findNode(state.data.tree, state.activeId) || state.data.tree[0];
   const sections = node.sections || [];
-  const childDownloads = (node.children || []).flatMap((child) => child.downloads || []);
-  articleEl.innerHTML = `<h2>${node.title}</h2><p class="meta">${node.summary || "Select an item from the left tree."}</p>${renderDownloads(node.downloads || childDownloads)}${sections.map((section) => `<h3>${section.title}</h3>${section.html}`).join("")}${!sections.length && !(node.downloads || childDownloads).length ? '<p class="empty">Content will be added here.</p>' : ""}`;
+  const downloads = node.downloads || collectDownloads(node).filter((item) => item.title);
+  articleEl.innerHTML = `<h2>${node.title}</h2><p class="meta">${node.summary || "Select an item from the left tree."}</p>${renderDownloads(downloads)}${sections.map((section) => `<h3>${section.title}</h3>${section.html}`).join("")}${!sections.length && !downloads.length ? '<p class="empty">Content will be added here.</p>' : ""}`;
 }
 function bindControls() {
   searchInput.addEventListener("input", (event) => { state.query = event.target.value; renderTree(); });
-  sidebarToggle.addEventListener("click", () => document.body.classList.toggle("sidebar-collapsed"));
-  mobileSidebarToggle.addEventListener("click", () => document.body.classList.toggle("sidebar-collapsed"));
+  sidebarToggle.addEventListener("click", () => document.body.classList.add("sidebar-collapsed"));
+  mobileSidebarToggle.addEventListener("click", () => document.body.classList.remove("sidebar-collapsed"));
+  railToggle.addEventListener("click", () => document.body.classList.remove("sidebar-collapsed"));
 }
 async function init() {
   const response = await fetch("content/knowledge.json", { cache: "no-store" });
