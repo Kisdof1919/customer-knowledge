@@ -106,25 +106,31 @@
                                                                                     "children":  [
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-frontends-123",
-                                                                                                         "title":  "1/2/3 Series"
+                                                                                                         "title":  "1/2/3 Series",
+                                                                                                         "folder":  true
                                                                                                      },
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-frontends-45678",
-                                                                                                         "title":  "4/5/6/7/8 Series"
+                                                                                                         "title":  "4/5/6/7/8 Series",
+                                                                                                         "folder":  true
                                                                                                      },
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-frontends-ptz",
-                                                                                                         "title":  "PTZ"
+                                                                                                         "title":  "PTZ",
+                                                                                                         "folder":  true
                                                                                                      },
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-frontends-analog",
-                                                                                                         "title":  "Analog Camera"
+                                                                                                         "title":  "Analog Camera",
+                                                                                                         "folder":  true
                                                                                                      },
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-thermal",
-                                                                                                         "title":  "Thermal"
+                                                                                                         "title":  "Thermal",
+                                                                                                         "folder":  true
                                                                                                      }
-                                                                                                 ]
+                                                                                                 ],
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-cctv-backends",
@@ -153,21 +159,19 @@
                                                                                                                                                }
                                                                                                                                            ]
                                                                                                                           }
-                                                                                                                      ]
+                                                                                                                      ],
+                                                                                                         "folder":  true
                                                                                                      },
                                                                                                      {
                                                                                                          "id":  "troubleshooting-cctv-backends-dvr",
                                                                                                          "title":  "DVR",
                                                                                                          "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-backends-analog",
-                                                                                                         "title":  "Analog Camera",
-                                                                                                         "folder":  true
                                                                                                      }
-                                                                                                 ]
+                                                                                                 ],
+                                                                                    "folder":  true
                                                                                 }
-                                                                            ]
+                                                                            ],
+                                                               "folder":  true
                                                            },
                                                            {
                                                                "id":  "troubleshooting-non-video",
@@ -175,21 +179,26 @@
                                                                "children":  [
                                                                                 {
                                                                                     "id":  "troubleshooting-speed-gates",
-                                                                                    "title":  "Speed Gates and Turnstiles"
+                                                                                    "title":  "Speed Gates and Turnstiles",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-video-intercom",
-                                                                                    "title":  "Video Intercom"
+                                                                                    "title":  "Video Intercom",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-alarm",
-                                                                                    "title":  "Alarm"
+                                                                                    "title":  "Alarm",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-access-control",
-                                                                                    "title":  "Access Control"
+                                                                                    "title":  "Access Control",
+                                                                                    "folder":  true
                                                                                 }
-                                                                            ]
+                                                                            ],
+                                                               "folder":  true
                                                            },
                                                            {
                                                                "id":  "troubleshooting-display-control",
@@ -197,21 +206,26 @@
                                                                "children":  [
                                                                                 {
                                                                                     "id":  "troubleshooting-decoder",
-                                                                                    "title":  "Decoder"
+                                                                                    "title":  "Decoder",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-video-controller",
-                                                                                    "title":  "Video Controller"
+                                                                                    "title":  "Video Controller",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-keyboard",
-                                                                                    "title":  "Keyboard"
+                                                                                    "title":  "Keyboard",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-led",
-                                                                                    "title":  "LED \u0026 Control System"
+                                                                                    "title":  "LED \u0026 Control System",
+                                                                                    "folder":  true
                                                                                 }
-                                                                            ]
+                                                                            ],
+                                                               "folder":  true
                                                            },
                                                            {
                                                                "id":  "troubleshooting-cloud-software",
@@ -219,19 +233,24 @@
                                                                "children":  [
                                                                                 {
                                                                                     "id":  "troubleshooting-hik-connect-team",
-                                                                                    "title":  "Hik-Connect Team"
+                                                                                    "title":  "Hik-Connect Team",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-hik-connect-personal",
-                                                                                    "title":  "Hik-Connect Personal"
+                                                                                    "title":  "Hik-Connect Personal",
+                                                                                    "folder":  true
                                                                                 },
                                                                                 {
                                                                                     "id":  "troubleshooting-hik-partner-pro",
-                                                                                    "title":  "Hik-Partner Pro"
+                                                                                    "title":  "Hik-Partner Pro",
+                                                                                    "folder":  true
                                                                                 }
-                                                                            ]
+                                                                            ],
+                                                               "folder":  true
                                                            }
-                                                       ]
+                                                       ],
+                                          "folder":  true
                                       }
                                   ]
                  }

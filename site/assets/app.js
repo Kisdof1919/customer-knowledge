@@ -14,10 +14,17 @@ const mobileSidebarToggle = document.getElementById("mobileSidebarToggle");
 const railToggle = document.getElementById("railToggle");
 
 function normalize(value) { return String(value || "").toLowerCase(); }
+function searchText(node) {
+  const values = [node.title];
+  if (node.id === "home" || node.id.startsWith("how-to")) {
+    values.push(node.summary, ...(node.keywords || []));
+    for (const item of node.downloads || []) values.push(item.title, item.type);
+  }
+  return values.map(normalize).join(" ");
+}
 function nodeMatches(node, query) {
   if (!query) return true;
-  const haystack = [node.title, node.summary, ...(node.keywords || [])].map(normalize).join(" ");
-  return haystack.includes(query) || (node.children || []).some((child) => nodeMatches(child, query));
+  return searchText(node).includes(query) || (node.children || []).some((child) => nodeMatches(child, query));
 }
 function countMatches(nodes, query) {
   if (!query) return 0;
@@ -95,4 +102,5 @@ async function init() {
   renderArticle();
 }
 init().catch((error) => { articleEl.innerHTML = `<h2>Unable to load knowledge base</h2><p>${error.message}</p>`; });
+
 
