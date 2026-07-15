@@ -39,7 +39,7 @@ function renderNodeList(nodes, level, query) {
   ul.className = "tree-list";
   for (const node of nodes) {
     if (!nodeMatches(node, query)) continue;
-    const hasChildren = Boolean(node.children && node.children.length);
+    const hasChildren = Boolean((node.children && node.children.length) || node.folder);
     const isOpen = state.openIds.has(node.id) || Boolean(query);
     const li = document.createElement("li");
     li.className = "tree-item";
@@ -55,7 +55,7 @@ function renderNodeList(nodes, level, query) {
       if (window.innerWidth <= 760) document.body.classList.add("sidebar-collapsed");
     });
     li.appendChild(row);
-    if (hasChildren && isOpen) li.appendChild(renderNodeList(node.children, level + 1, query));
+    if (node.children && node.children.length && isOpen) li.appendChild(renderNodeList(node.children, level + 1, query));
     ul.appendChild(li);
   }
   return ul;
@@ -95,3 +95,4 @@ async function init() {
   renderArticle();
 }
 init().catch((error) => { articleEl.innerHTML = `<h2>Unable to load knowledge base</h2><p>${error.message}</p>`; });
+
