@@ -44,6 +44,18 @@
                                                                              ]
                                                            },
                                                            {
+                                                               "id":  "how-to-camera",
+                                                               "title":  "Camera",
+                                                               "summary":  "Camera how-to guides.",
+                                                               "downloads":  [
+                                                                                 {
+                                                                                     "title":  "How to Capture Pictures and Upload to FTP V2.0",
+                                                                                     "type":  "PDF",
+                                                                                     "href":  "files/how-to/capture-pictures-upload-to-ftp-v2.pdf"
+                                                                                 }
+                                                                             ]
+                                                           },
+                                                           {
                                                                "id":  "how-to-hc-hpp",
                                                                "title":  "HC/HPP",
                                                                "summary":  "Hik-Connect and Hik-Partner Pro how-to guides.",
@@ -101,7 +113,125 @@
                                                                "summary":  "Camera troubleshooting workflow and common issue cases.",
                                                                "folder":  true,
                                                                "children":  [
-
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-offline",
+                                                                                    "title":  "Camera Offline",
+                                                                                    "summary":  "Troubleshooting steps for camera offline or intermittent disconnection issues.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "offline",
+                                                                                                     "disconnect",
+                                                                                                     "poe",
+                                                                                                     "network cable",
+                                                                                                     "switch",
+                                                                                                     "ups"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eFirst check whether the network cable is defective. Connect the faulty camera and another normally powered camera to the same switch using the same network cable for comparison. If the cable is confirmed to be defective, replace it with a known good cable.\u003c/li\u003e\u003cli\u003eIf the cable is normal, check whether the switch load is too high or whether the PoE power budget is insufficient.\u003c/li\u003e\u003cli\u003eCheck whether the UPS power supply is unstable.\u003c/li\u003e\u003cli\u003eCheck whether the network port is damaged or short-circuited.\u003c/li\u003e\u003cli\u003eIf the issue may be caused by a software program exception, collect the required information and send it to HQ for analysis.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-black-screen",
+                                                                                    "title":  "Black Screen",
+                                                                                    "summary":  "Troubleshooting steps for black screen or live view failure.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "black screen",
+                                                                                                     "preview failed",
+                                                                                                     "live view",
+                                                                                                     "plugin",
+                                                                                                     "connection limit"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eIf live view shows a black screen or fails, check whether it is caused by a browser/plugin issue. Uninstall and reinstall the plugin.\u003c/li\u003e\u003cli\u003eCheck whether the maximum connection limit has been exceeded.\u003c/li\u003e\u003cli\u003eFor 1/2/3 series devices, the maximum number of connections is 6. For 4/5/6/7/8 series devices and PTZ cameras, the maximum number of connections is 20. Live view may fail after the limit is exceeded.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-blurry-preview",
+                                                                                    "title":  "Blurry Preview",
+                                                                                    "summary":  "Troubleshooting steps for blurry camera preview images.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "blurry",
+                                                                                                     "preview",
+                                                                                                     "bitrate",
+                                                                                                     "encoding",
+                                                                                                     "tcp",
+                                                                                                     "h264+",
+                                                                                                     "h265+"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eCheck whether the network bandwidth is congested. Insufficient bandwidth may cause video lag and blurry images.\u003c/li\u003e\u003cli\u003eCheck whether Video Encoding is set to H.264+ or H.265+. If so, disable H.264+/H.265+.\u003c/li\u003e\u003cli\u003eCheck whether the audio/video parameters are reasonable. Set Bitrate Type to constant, set Image Quality to High, and set Max. Bitrate to 8 Mbps as a reference for a 2 MP device.\u003c/li\u003e\u003cli\u003eSet the stream protocol to TCP.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-night-ghosting",
+                                                                                    "title":  "Night Blur/Ghosting",
+                                                                                    "summary":  "Troubleshooting steps for blurry or ghosting images at night or in low-light scenes.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "night",
+                                                                                                     "ghosting",
+                                                                                                     "low light",
+                                                                                                     "wdr",
+                                                                                                     "dnr",
+                                                                                                     "shutter",
+                                                                                                     "exposure"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eFor general low-light ghosting, set Supplement Light Brightness Control to manual and adjust brightness to 100. Improve the ambient lighting conditions where possible.\u003c/li\u003e\u003cli\u003eIf ghosting is caused by slow shutter speed, increase the shutter speed or reduce the exposure time, for example to 1/50. Note that too short an exposure time may darken the image.\u003c/li\u003e\u003cli\u003eIf ghosting is caused by temporal noise reduction, set Digital Noise Reduction to Expert Mode and reduce Time DNR Level to 30-40. Image noise may increase; you can raise Space DNR Level to 60-70 as needed.\u003c/li\u003e\u003cli\u003eReduce sharpness to around 30 and increase contrast to 60-70 to reduce noise interference.\u003c/li\u003e\u003cli\u003eIf WDR is enabled in a low-light scene and causes ghosting, disable WDR or set WDR to Auto. WDR is intended for strong-light or backlight scenes.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-missing-recording",
+                                                                                    "title":  "Missing Recording",
+                                                                                    "summary":  "Troubleshooting steps for missing segments in continuous SD card recording.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "recording",
+                                                                                                     "missing",
+                                                                                                     "sd card",
+                                                                                                     "i frame",
+                                                                                                     "frame rate"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eIf continuous recording is configured but recording is interrupted during certain time periods while the SD card status shows no abnormality, first confirm the SD card specifications and compatibility.\u003c/li\u003e\u003cli\u003eThen try adjusting the I-frame interval or video frame rate. As a reference, set the I-frame interval to about twice the frame rate. The issue may be related to insufficient recording buffer.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-camera-osd-time-jump",
+                                                                                    "title":  "OSD Time Jump",
+                                                                                    "summary":  "Troubleshooting steps for camera OSD time jumping forward or backward.",
+                                                                                    "keywords":  [
+                                                                                                     "camera",
+                                                                                                     "osd",
+                                                                                                     "time",
+                                                                                                     "ntp",
+                                                                                                     "timezone",
+                                                                                                     "dst"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Troubleshooting Steps",
+                                                                                                         "html":  "\u003col\u003e\u003cli\u003eConfirm whether the NTP parameters are configured correctly and provide a screenshot of the NTP settings.\u003c/li\u003e\u003cli\u003eConfirm whether the device is connected to multiple time synchronization sources, such as multiple NVRs, DVRs, or platforms.\u003c/li\u003e\u003cli\u003eConfirm whether the configured time zone matches the local time zone and provide the time zone configuration.\u003c/li\u003e\u003cli\u003eConfirm whether daylight saving time is enabled and provide a screenshot of the DST settings.\u003c/li\u003e\u003cli\u003eConfirm whether there was any manual time synchronization caused by user operation.\u003c/li\u003e\u003c/ol\u003e"
+                                                                                                     }
+                                                                                                 ]
+                                                                                }
                                                                             ]
                                                            },
                                                            {
