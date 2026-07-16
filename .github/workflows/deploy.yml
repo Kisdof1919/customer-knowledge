@@ -24,6 +24,7 @@ jobs:
 
       - name: Prepare static site
         run: |
+          node scripts/build-content.mjs
           mkdir -p site/files
           cp -R static/files/. site/files/
           touch site/.nojekyll

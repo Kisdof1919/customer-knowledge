@@ -72,5 +72,5 @@ th { background: var(--panel-soft); }
 }
 
 
-.article-image { border: 1px solid var(--line); border-radius: 5px; display: block; height: auto; margin: 14px 0 18px; max-width: 100%; }
+.article-image { border: 1px solid var(--line); border-radius: 5px; display: block; height: auto; margin: 14px 0 18px; max-width: min(100%, 620px); }
 

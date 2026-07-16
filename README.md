@@ -1,52 +1,54 @@
 # Customer Knowledge Base
 
-This is a Docusaurus-based customer knowledge base.
+This repository publishes a simple static customer knowledge base to GitHub Pages.
 
-## Local Preview
+The live site is generated from Markdown files in `content/`. The old `docs/` Docusaurus folder is no longer the source of truth.
 
-```powershell
-pnpm start
-```
+## Edit Content
 
-Open:
+Recommended editor:
 
 ```text
-http://127.0.0.1:3000/
+https://pagescms.org
 ```
 
-## Production Build
+Sign in with GitHub, open `Kisdof1919/customer-knowledge`, and edit the collections configured in `.pages.yml`.
 
-```powershell
-pnpm build
-```
-
-The generated site is written to:
+Main content folders:
 
 ```text
-build/
+content/how-to/
+content/troubleshooting/
 ```
 
-## Search
+Downloadable PDFs, Excel files, and similar documents live in:
 
-Local search is generated during the production build. In `pnpm start` development mode, the search box may show that the search index is only available after running `docusaurus build`.
+```text
+static/files/
+```
 
-To preview the production build with search:
+Images used inside articles live in:
 
-```powershell
-pnpm build
-pnpm serve
+```text
+site/assets/images/
+```
+
+## Local Build
+
+Run this before previewing or deploying if Markdown content changed:
+
+```bat
+node scripts/build-content.mjs
+```
+
+The script generates:
+
+```text
+site/content/knowledge.json
 ```
 
 ## GitHub Pages Deployment
 
-This repository includes a GitHub Actions workflow at:
+GitHub Actions runs `node scripts/build-content.mjs`, copies `static/files/` into the published site, and deploys the `site/` folder.
 
-```text
-.github/workflows/deploy.yml
-```
-
-After the repository is pushed to GitHub, enable GitHub Pages with **GitHub Actions** as the source. Every push to the `main` branch will build and deploy the site.
-
-## Adding Articles
-
-Add `.mdx` files under `docs/`. The sidebar is generated automatically from the folder structure.
+Every push to `main` redeploys the public site automatically.

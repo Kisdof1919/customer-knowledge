@@ -1,0 +1,155 @@
+media:
+  - name: images
+    label: Images
+    input: site/assets/images
+    output: /customer-knowledge/assets/images
+    rename: safe
+    categories: [image]
+  - name: files
+    label: Downloadable Files
+    input: static/files
+    output: /customer-knowledge/files
+    rename: safe
+    categories: [document, spreadsheet]
+
+content:
+  - name: how_to
+    label: How-to Pages
+    type: collection
+    path: content/how-to
+    filename: "{title}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: summary
+        label: Summary
+        type: text
+      - name: order
+        label: Order
+        type: number
+      - name: keywords
+        label: Search Keywords
+        type: list
+        field:
+          type: string
+      - name: downloads
+        label: Download Links
+        type: list
+        fields:
+          - name: title
+            label: Download Title
+            type: string
+          - name: type
+            label: File Type
+            type: string
+          - name: href
+            label: Public Link
+            type: string
+      - name: body
+        label: Page Content
+        type: rich-text
+
+  - name: camera_troubleshooting
+    label: Camera Troubleshooting
+    type: collection
+    path: content/troubleshooting/camera
+    filename: "{title}.md"
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: order
+        type: number
+      - name: keywords
+        type: list
+        field:
+          type: string
+      - name: body
+        label: Troubleshooting Content
+        type: rich-text
+
+  - name: nvr_troubleshooting
+    label: NVR Troubleshooting
+    type: collection
+    path: content/troubleshooting/nvr
+    filename: "{title}.md"
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: order
+        type: number
+      - name: keywords
+        type: list
+        field:
+          type: string
+      - name: body
+        label: Troubleshooting Content
+        type: rich-text
+
+  - name: non_video_troubleshooting
+    label: Non-Video Troubleshooting
+    type: collection
+    path: content/troubleshooting/non-video
+    filename: "{title}.md"
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: order
+        type: number
+      - name: folder
+        label: Show as Folder
+        type: boolean
+      - name: keywords
+        type: list
+        field:
+          type: string
+      - name: body
+        label: Troubleshooting Content
+        type: rich-text
+
+  - name: cloud_software_troubleshooting
+    label: Cloud Software Troubleshooting
+    type: collection
+    path: content/troubleshooting/cloud-software
+    filename: "{title}.md"
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: order
+        type: number
+      - name: folder
+        label: Show as Folder
+        type: boolean
+      - name: keywords
+        type: list
+        field:
+          type: string
+      - name: body
+        label: Troubleshooting Content
+        type: rich-text
+
+  - name: site_home
+    label: Site Home
+    type: file
+    path: content/index.md
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: body
+        type: rich-text

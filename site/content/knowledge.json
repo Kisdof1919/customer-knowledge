@@ -1,310 +1,378 @@
-﻿{
-    "tree":  [
-                 {
-                     "id":  "home",
-                     "title":  "Customer Knowledge Base",
-                     "summary":  "Search customer-facing how-to documents and troubleshooting notes.",
-                     "keywords":  [
-                                      "knowledge base",
-                                      "support",
-                                      "case"
-                                  ],
-                     "sections":  [
-                                      {
-                                          "title":  "How to use this site",
-                                          "html":  "\u003cp\u003eUse the search box or expand the tree on the left. How-to pages provide downloadable guides. Troubleshooting pages provide concise symptoms and suggestions.\u003c/p\u003e"
-                                      }
-                                  ],
-                     "children":  [
-                                      {
-                                          "id":  "how-to",
-                                          "title":  "How-to",
-                                          "summary":  "Downloadable guides grouped by product area.",
-                                          "keywords":  [
-                                                           "guide",
-                                                           "download",
-                                                           "pdf"
-                                                       ],
-                                          "children":  [
-                                                           {
-                                                               "id":  "how-to-cctv",
-                                                               "title":  "CCTV",
-                                                               "summary":  "CCTV how-to guides.",
-                                                               "downloads":  [
-                                                                                 {
-                                                                                     "title":  "Configure Line Crossing in NVR GUI 5.0",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/configure-line-crossing-in-nvr-gui-5.pdf"
-                                                                                 },
-                                                                                 {
-                                                                                     "title":  "Use Thermal Design Tool",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/use-thermal-design-tool.pdf"
-                                                                                 }
-                                                                             ]
-                                                           },
-                                                           {
-                                                               "id":  "how-to-camera",
-                                                               "title":  "Camera",
-                                                               "summary":  "Camera how-to guides.",
-                                                               "downloads":  [
-                                                                                 {
-                                                                                     "title":  "How to Capture Pictures and Upload to FTP V2.0",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/capture-pictures-upload-to-ftp-v2.pdf"
-                                                                                 }
-                                                                             ]
-                                                           },
-                                                           {
-                                                               "id":  "how-to-hc-hpp",
-                                                               "title":  "HC/HPP",
-                                                               "summary":  "Hik-Connect and Hik-Partner Pro how-to guides.",
-                                                               "downloads":  [
-                                                                                 {
-                                                                                     "title":  "Get an Authorization Code in HPP",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/how-to-get-authorization-code-in-hpp.pdf"
-                                                                                 },
-                                                                                 {
-                                                                                     "title":  "Submit Password and Unbind Case in EU",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/three-ways-to-submit-password-and-unbind-case-eu.pdf"
-                                                                                 }
-                                                                             ]
-                                                           },
-                                                           {
-                                                               "id":  "how-to-access-control",
-                                                               "title":  "Access Control",
-                                                               "summary":  "Access control how-to guides.",
-                                                               "downloads":  [
-                                                                                 {
-                                                                                     "title":  "Connect Card Reader to Villa Door Station",
-                                                                                     "type":  "PDF",
-                                                                                     "href":  "files/how-to/connect-card-reader-to-villa-door-station.pdf"
-                                                                                 }
-                                                                             ]
-                                                           },
-                                                           {
-                                                               "id":  "how-to-alarm",
-                                                               "title":  "Alarm",
-                                                               "summary":  "Alarm how-to guides.",
-                                                               "sections":  [
-                                                                                {
-                                                                                    "title":  "Documents",
-                                                                                    "html":  "\u003cp class=\"empty\"\u003eDocuments will be added here.\u003c/p\u003e"
-                                                                                }
-                                                                            ]
-                                                           }
-                                                       ]
-                                      },
-                                      {
-                                          "id":  "troubleshooting",
-                                          "title":  "Troubleshooting",
-                                          "summary":  "Troubleshooting notes grouped by product line.",
-                                          "keywords":  [
-                                                           "troubleshooting",
-                                                           "issue",
-                                                           "solution"
-                                                       ],
-                                          "children":  [
-                                                           {
-                                                               "id":  "troubleshooting-camera",
-                                                               "title":  "Camera",
-                                                               "summary":  "Camera troubleshooting workflow and common issue cases.",
-                                                               "folder":  true,
-                                                               "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-offline",
-                                                                                    "title":  "Camera Offline",
-                                                                                    "summary":  "Troubleshooting steps for camera offline or intermittent disconnection issues.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "offline",
-                                                                                                     "disconnect",
-                                                                                                     "poe",
-                                                                                                     "network cable",
-                                                                                                     "switch",
-                                                                                                     "ups"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003col\u003e\u003cli\u003eFirst check whether the network cable is defective. Connect the faulty camera and another normally powered camera to the same switch using the same network cable for comparison. If the cable is confirmed to be defective, replace it with a known good cable.\u003c/li\u003e\u003cli\u003eIf the cable is normal, check whether the switch load is too high or whether the PoE power budget is insufficient.\u003c/li\u003e\u003cli\u003eCheck whether the UPS power supply is unstable.\u003c/li\u003e\u003cli\u003eCheck whether the network port is damaged or short-circuited.\u003c/li\u003e\u003cli\u003eIf the issue may be caused by a software program exception, collect the required information and send it to HQ for analysis.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-black-screen",
-                                                                                    "title":  "Black Screen",
-                                                                                    "summary":  "Troubleshooting steps for black screen or live view failure.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "black screen",
-                                                                                                     "preview failed",
-                                                                                                     "live view",
-                                                                                                     "plugin",
-                                                                                                     "connection limit"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003col\u003e\u003cli\u003eIf live view shows a black screen or fails, check whether it is caused by a browser/plugin issue. Uninstall and reinstall the plugin.\u003c/li\u003e\u003cli\u003eCheck whether the maximum connection limit has been exceeded.\u003c/li\u003e\u003cli\u003eFor 1/2/3 series devices, the maximum number of connections is 6. For 4/5/6/7/8 series devices and PTZ cameras, the maximum number of connections is 20. Live view may fail after the limit is exceeded.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-blurry-preview",
-                                                                                    "title":  "Blurry Preview",
-                                                                                    "summary":  "Troubleshooting steps for blurry camera preview images.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "blurry",
-                                                                                                     "preview",
-                                                                                                     "bitrate",
-                                                                                                     "encoding",
-                                                                                                     "tcp",
-                                                                                                     "h264+",
-                                                                                                     "h265+"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003col\u003e\u003cli\u003eCheck whether the network bandwidth is congested. Insufficient bandwidth may cause video lag and blurry images.\u003c/li\u003e\u003cli\u003eCheck whether Video Encoding is set to H.264+ or H.265+. If so, disable H.264+/H.265+.\u003c/li\u003e\u003cli\u003eCheck whether the audio/video parameters are reasonable. Set Bitrate Type to constant, set Image Quality to High, and set Max. Bitrate to 8 Mbps as a reference for a 2 MP device.\u003c/li\u003e\u003cli\u003eSet the stream protocol to TCP.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-night-ghosting",
-                                                                                    "title":  "Night Blur/Ghosting",
-                                                                                    "summary":  "Troubleshooting steps for blurry or ghosting images at night or in low-light scenes.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "night",
-                                                                                                     "ghosting",
-                                                                                                     "low light",
-                                                                                                     "wdr",
-                                                                                                     "dnr",
-                                                                                                     "shutter",
-                                                                                                     "exposure"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003col\u003e\u003cli\u003eFor general low-light ghosting, set Supplement Light Brightness Control to manual and adjust brightness to 100. Improve the ambient lighting conditions where possible.\u003c/li\u003e\u003c/ol\u003e\u003cimg class=\"article-image\" src=\"assets/images/camera/camera-doc-image-01.png\" alt=\"Supplement light brightness setting\"\u003e\u003col start=\"2\"\u003e\u003cli\u003eIf ghosting is caused by slow shutter speed, increase the shutter speed or reduce the exposure time, for example to 1/50. Note that too short an exposure time may darken the image.\u003c/li\u003e\u003c/ol\u003e\u003cimg class=\"article-image\" src=\"assets/images/camera/camera-doc-image-02.png\" alt=\"Exposure time setting\"\u003e\u003col start=\"3\"\u003e\u003cli\u003eIf ghosting is caused by temporal noise reduction, set Digital Noise Reduction to Expert Mode and reduce Time DNR Level to 30-40. Image noise may increase; you can raise Space DNR Level to 60-70 as needed.\u003c/li\u003e\u003c/ol\u003e\u003cimg class=\"article-image\" src=\"assets/images/camera/camera-doc-image-03.png\" alt=\"Digital noise reduction settings\"\u003e\u003col start=\"4\"\u003e\u003cli\u003eReduce sharpness to around 30 and increase contrast to 60-70 to reduce noise interference.\u003c/li\u003e\u003c/ol\u003e\u003cimg class=\"article-image\" src=\"assets/images/camera/camera-doc-image-04.png\" alt=\"Sharpness and contrast settings\"\u003e\u003col start=\"5\"\u003e\u003cli\u003eIf WDR is enabled in a low-light scene and causes ghosting, disable WDR or set WDR to Auto. WDR is intended for strong-light or backlight scenes.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-missing-recording",
-                                                                                    "title":  "Missing Recording",
-                                                                                    "summary":  "Troubleshooting steps for missing segments in continuous SD card recording.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "recording",
-                                                                                                     "missing",
-                                                                                                     "sd card",
-                                                                                                     "i frame",
-                                                                                                     "frame rate"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003cp\u003eIf continuous recording is configured but recording is interrupted during certain time periods while the SD card status shows no abnormality, use the following checks.\u003c/p\u003e\u003cimg class=\"article-image\" src=\"assets/images/camera/camera-doc-image-05.png\" alt=\"Missing recording example\"\u003e\u003col\u003e\u003cli\u003eFirst confirm the SD card specifications and compatibility.\u003c/li\u003e\u003cli\u003eThen try adjusting the I-frame interval or video frame rate. As a reference, set the I-frame interval to about twice the frame rate. The issue may be related to insufficient recording buffer.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-camera-osd-time-jump",
-                                                                                    "title":  "OSD Time Jump",
-                                                                                    "summary":  "Troubleshooting steps for camera OSD time jumping forward or backward.",
-                                                                                    "keywords":  [
-                                                                                                     "camera",
-                                                                                                     "osd",
-                                                                                                     "time",
-                                                                                                     "ntp",
-                                                                                                     "timezone",
-                                                                                                     "dst"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Troubleshooting Steps",
-                                                                                                         "html":  "\u003col\u003e\u003cli\u003eConfirm whether the NTP parameters are configured correctly and provide a screenshot of the NTP settings.\u003c/li\u003e\u003cli\u003eConfirm whether the device is connected to multiple time synchronization sources, such as multiple NVRs, DVRs, or platforms.\u003c/li\u003e\u003cli\u003eConfirm whether the configured time zone matches the local time zone and provide the time zone configuration.\u003c/li\u003e\u003cli\u003eConfirm whether daylight saving time is enabled and provide a screenshot of the DST settings.\u003c/li\u003e\u003cli\u003eConfirm whether there was any manual time synchronization caused by user operation.\u003c/li\u003e\u003c/ol\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                }
-                                                                            ]
-                                                           },
-                                                           {
-                                                               "id":  "troubleshooting-nvr",
-                                                               "title":  "NVR",
-                                                               "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-nvr-time",
-                                                                                    "title":  "NVR Time Issue",
-                                                                                    "summary":  "Symptoms and suggestions for NVR time reset or 1970 time issues.",
-                                                                                    "keywords":  [
-                                                                                                     "nvr",
-                                                                                                     "time",
-                                                                                                     "1970",
-                                                                                                     "cmos",
-                                                                                                     "battery",
-                                                                                                     "chip"
-                                                                                                 ],
-                                                                                    "sections":  [
-                                                                                                     {
-                                                                                                         "title":  "Symptoms and Suggestions",
-                                                                                                         "html":  "\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eSymptom\u003c/th\u003e\u003cth\u003eSuggestion\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eThe time can be saved manually, but changes to 1970 after reboot.\u003c/td\u003e\u003ctd\u003eTry replacing the CMOS battery.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eThe time cannot be saved correctly and always stays at 1970.\u003c/td\u003e\u003ctd\u003eThe chip may be aging.\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e"
-                                                                                                     }
-                                                                                                 ]
-                                                                                }
-                                                                            ],
-                                                               "folder":  true
-                                                           },
-                                                           {
-                                                               "id":  "troubleshooting-non-video",
-                                                               "title":  "Non-Video",
-                                                               "summary":  "Non-video troubleshooting paths.",
-                                                               "folder":  true,
-                                                               "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-video-intercom",
-                                                                                    "title":  "Video Intercom",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-alarm",
-                                                                                    "title":  "Alarm",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-access-control",
-                                                                                    "title":  "Access Control",
-                                                                                    "folder":  true
-                                                                                }
-                                                                            ]
-                                                           },
-                                                           {
-                                                               "id":  "troubleshooting-cloud-software",
-                                                               "title":  "Cloud Software",
-                                                               "summary":  "Cloud software troubleshooting paths.",
-                                                               "folder":  true,
-                                                               "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-hik-partner-pro",
-                                                                                    "title":  "Hik-Partner Pro",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-hik-connect",
-                                                                                    "title":  "Hik-Connect",
-                                                                                    "folder":  true
-                                                                                }
-                                                                            ]
-                                                           }
-                                                       ],
-                                          "folder":  true
-                                      }
-                                  ]
-                 }
-             ]
+{
+  "tree": [
+    {
+      "id": "home",
+      "title": "Customer Knowledge Base",
+      "summary": "Search customer-facing how-to documents and troubleshooting notes.",
+      "keywords": [
+        "knowledge base",
+        "support",
+        "case"
+      ],
+      "sections": [
+        {
+          "title": "How to use this site",
+          "html": "<p>Use the search box or expand the tree on the left. How-to pages provide downloadable guides. Troubleshooting pages provide concise symptoms and suggestions.</p>"
+        }
+      ],
+      "children": [
+        {
+          "id": "how-to",
+          "title": "How-to",
+          "summary": "Downloadable guides grouped by product area.",
+          "keywords": [
+            "guide",
+            "download",
+            "pdf"
+          ],
+          "folder": true,
+          "sections": [
+            {
+              "title": "Details",
+              "html": "<p>Select a product area to view available downloadable guides.</p>"
+            }
+          ],
+          "children": [
+            {
+              "id": "how-to-cctv",
+              "title": "CCTV",
+              "summary": "CCTV how-to guides.",
+              "downloads": [
+                {
+                  "title": "Configure Line Crossing in NVR GUI 5.0",
+                  "type": "PDF",
+                  "href": "files/how-to/configure-line-crossing-in-nvr-gui-5.pdf"
+                },
+                {
+                  "title": "Use Thermal Design Tool",
+                  "type": "PDF",
+                  "href": "files/how-to/use-thermal-design-tool.pdf"
+                }
+              ]
+            },
+            {
+              "id": "how-to-camera",
+              "title": "Camera",
+              "summary": "Camera how-to guides.",
+              "downloads": [
+                {
+                  "title": "How to Capture Pictures and Upload to FTP V2.0",
+                  "type": "PDF",
+                  "href": "files/how-to/capture-pictures-upload-to-ftp-v2.pdf"
+                }
+              ]
+            },
+            {
+              "id": "how-to-hc-hpp",
+              "title": "HC/HPP",
+              "summary": "Hik-Connect and Hik-Partner Pro how-to guides.",
+              "downloads": [
+                {
+                  "title": "Get an Authorization Code in HPP",
+                  "type": "PDF",
+                  "href": "files/how-to/how-to-get-authorization-code-in-hpp.pdf"
+                },
+                {
+                  "title": "Submit Password and Unbind Case in EU",
+                  "type": "PDF",
+                  "href": "files/how-to/three-ways-to-submit-password-and-unbind-case-eu.pdf"
+                }
+              ]
+            },
+            {
+              "id": "how-to-access-control",
+              "title": "Access Control",
+              "summary": "Access control how-to guides.",
+              "downloads": [
+                {
+                  "title": "Connect Card Reader to Villa Door Station",
+                  "type": "PDF",
+                  "href": "files/how-to/connect-card-reader-to-villa-door-station.pdf"
+                }
+              ]
+            },
+            {
+              "id": "how-to-alarm",
+              "title": "Alarm",
+              "summary": "Alarm how-to guides.",
+              "sections": [
+                {
+                  "title": "Details",
+                  "html": "<p>Documents will be added here.</p>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Troubleshooting",
+          "summary": "Troubleshooting notes grouped by product line.",
+          "keywords": [
+            "troubleshooting",
+            "issue",
+            "solution"
+          ],
+          "folder": true,
+          "sections": [
+            {
+              "title": "Details",
+              "html": "<p>Select a product line to view troubleshooting notes.</p>"
+            }
+          ],
+          "children": [
+            {
+              "id": "troubleshooting-camera",
+              "title": "Camera",
+              "summary": "Camera troubleshooting workflow and common issue cases.",
+              "folder": true,
+              "sections": [
+                {
+                  "title": "Details",
+                  "html": "<p>Camera troubleshooting workflow content will be added here.</p>"
+                }
+              ],
+              "children": [
+                {
+                  "id": "troubleshooting-camera-offline",
+                  "title": "Camera Offline",
+                  "summary": "Troubleshooting steps for camera offline or intermittent disconnection issues.",
+                  "keywords": [
+                    "camera",
+                    "offline",
+                    "disconnect",
+                    "poe",
+                    "network cable",
+                    "switch",
+                    "ups"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<ol><li>First check whether the network cable is defective. Connect the faulty camera and another normally powered camera to the same switch using the same network cable for comparison. If the cable is confirmed to be defective, replace it with a known good cable.</li><li>If the cable is normal, check whether the switch load is too high or whether the PoE power budget is insufficient.</li><li>Check whether the UPS power supply is unstable.</li><li>Check whether the network port is damaged or short-circuited.</li><li>If the issue may be caused by a software program exception, collect the required information and send it to HQ for analysis.</li></ol>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-camera-black-screen",
+                  "title": "Black Screen",
+                  "summary": "Troubleshooting steps for black screen or live view failure.",
+                  "keywords": [
+                    "camera",
+                    "black screen",
+                    "preview failed",
+                    "live view",
+                    "plugin",
+                    "connection limit"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<ol><li>If live view shows a black screen or fails, check whether it is caused by a browser/plugin issue. Uninstall and reinstall the plugin.</li><li>Check whether the maximum connection limit has been exceeded.</li><li>For 1/2/3 series devices, the maximum number of connections is 6. For 4/5/6/7/8 series devices and PTZ cameras, the maximum number of connections is 20. Live view may fail after the limit is exceeded.</li></ol>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-camera-blurry-preview",
+                  "title": "Blurry Preview",
+                  "summary": "Troubleshooting steps for blurry camera preview images.",
+                  "keywords": [
+                    "camera",
+                    "blurry",
+                    "preview",
+                    "bitrate",
+                    "encoding",
+                    "tcp",
+                    "h264+",
+                    "h265+"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<ol><li>Check whether the network bandwidth is congested. Insufficient bandwidth may cause video lag and blurry images.</li><li>Check whether Video Encoding is set to H.264+ or H.265+. If so, disable H.264+/H.265+.</li><li>Check whether the audio/video parameters are reasonable. Set Bitrate Type to constant, set Image Quality to High, and set Max. Bitrate to 8 Mbps as a reference for a 2 MP device.</li><li>Set the stream protocol to TCP.</li></ol>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-camera-night-ghosting",
+                  "title": "Night Blur/Ghosting",
+                  "summary": "Troubleshooting steps for blurry or ghosting images at night or in low-light scenes.",
+                  "keywords": [
+                    "camera",
+                    "night",
+                    "ghosting",
+                    "low light",
+                    "wdr",
+                    "dnr",
+                    "shutter",
+                    "exposure"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<ol><li>For general low-light ghosting, set Supplement Light Brightness Control to manual and adjust brightness to 100. Improve the ambient lighting conditions where possible.</li></ol><p><img class=\"article-image\" src=\"assets/images/camera/camera-doc-image-01.png\" alt=\"Supplement light brightness setting\"></p><ol><li>If ghosting is caused by slow shutter speed, increase the shutter speed or reduce the exposure time, for example to 1/50. Note that too short an exposure time may darken the image.</li></ol><p><img class=\"article-image\" src=\"assets/images/camera/camera-doc-image-02.png\" alt=\"Exposure time setting\"></p><ol><li>If ghosting is caused by temporal noise reduction, set Digital Noise Reduction to Expert Mode and reduce Time DNR Level to 30-40. Image noise may increase; you can raise Space DNR Level to 60-70 as needed.</li></ol><p><img class=\"article-image\" src=\"assets/images/camera/camera-doc-image-03.png\" alt=\"Digital noise reduction settings\"></p><ol><li>Reduce sharpness to around 30 and increase contrast to 60-70 to reduce noise interference.</li></ol><p><img class=\"article-image\" src=\"assets/images/camera/camera-doc-image-04.png\" alt=\"Sharpness and contrast settings\"></p><ol><li>If WDR is enabled in a low-light scene and causes ghosting, disable WDR or set WDR to Auto. WDR is intended for strong-light or backlight scenes.</li></ol>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-camera-missing-recording",
+                  "title": "Missing Recording",
+                  "summary": "Troubleshooting steps for missing segments in continuous SD card recording.",
+                  "keywords": [
+                    "camera",
+                    "recording",
+                    "missing",
+                    "sd card",
+                    "i frame",
+                    "frame rate"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>If continuous recording is configured but recording is interrupted during certain time periods while the SD card status shows no abnormality, use the following checks.</p><p><img class=\"article-image\" src=\"assets/images/camera/camera-doc-image-05.png\" alt=\"Missing recording example\"></p><ol><li>First confirm the SD card specifications and compatibility.</li><li>Then try adjusting the I-frame interval or video frame rate. As a reference, set the I-frame interval to about twice the frame rate. The issue may be related to insufficient recording buffer.</li></ol>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-camera-osd-time-jump",
+                  "title": "OSD Time Jump",
+                  "summary": "Troubleshooting steps for camera OSD time jumping forward or backward.",
+                  "keywords": [
+                    "camera",
+                    "osd",
+                    "time",
+                    "ntp",
+                    "timezone",
+                    "dst"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<ol><li>Confirm whether the NTP parameters are configured correctly and provide a screenshot of the NTP settings.</li><li>Confirm whether the device is connected to multiple time synchronization sources, such as multiple NVRs, DVRs, or platforms.</li><li>Confirm whether the configured time zone matches the local time zone and provide the time zone configuration.</li><li>Confirm whether daylight saving time is enabled and provide a screenshot of the DST settings.</li><li>Confirm whether there was any manual time synchronization caused by user operation.</li></ol>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "troubleshooting-nvr",
+              "title": "NVR",
+              "summary": "NVR troubleshooting paths.",
+              "folder": true,
+              "sections": [
+                {
+                  "title": "Details",
+                  "html": "<p>NVR troubleshooting workflow content will be added here.</p>"
+                }
+              ],
+              "children": [
+                {
+                  "id": "troubleshooting-nvr-time",
+                  "title": "NVR Time Issue",
+                  "summary": "Symptoms and suggestions for NVR time reset or 1970 time issues.",
+                  "keywords": [
+                    "nvr",
+                    "time",
+                    "1970",
+                    "cmos",
+                    "battery",
+                    "chip"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<table><thead><tr><th>Symptom</th><th>Suggestion</th></tr></thead><tbody><tr><td>The time can be saved manually, but changes to 1970 after reboot.</td><td>Try replacing the CMOS battery.</td></tr><tr><td>The time cannot be saved correctly and always stays at 1970.</td><td>The chip may be aging.</td></tr></tbody></table>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "troubleshooting-non-video",
+              "title": "Non-Video",
+              "summary": "Non-video troubleshooting paths.",
+              "folder": true,
+              "sections": [
+                {
+                  "title": "Details",
+                  "html": "<p>Non-video troubleshooting workflow content will be added here.</p>"
+                }
+              ],
+              "children": [
+                {
+                  "id": "troubleshooting-video-intercom",
+                  "title": "Video Intercom",
+                  "folder": true,
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Content will be added here.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-alarm",
+                  "title": "Alarm",
+                  "folder": true,
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Content will be added here.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-access-control",
+                  "title": "Access Control",
+                  "folder": true,
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Content will be added here.</p>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "troubleshooting-cloud-software",
+              "title": "Cloud Software",
+              "summary": "Cloud software troubleshooting paths.",
+              "folder": true,
+              "sections": [
+                {
+                  "title": "Details",
+                  "html": "<p>Cloud software troubleshooting workflow content will be added here.</p>"
+                }
+              ],
+              "children": [
+                {
+                  "id": "troubleshooting-hik-partner-pro",
+                  "title": "Hik-Partner Pro",
+                  "folder": true,
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Content will be added here.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-hik-connect",
+                  "title": "Hik-Connect",
+                  "folder": true,
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Content will be added here.</p>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

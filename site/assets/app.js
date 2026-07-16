@@ -1,7 +1,7 @@
 ﻿const state = {
   data: null,
   activeId: "home",
-  openIds: new Set(["home", "how-to", "troubleshooting", "troubleshooting-cctv", "troubleshooting-cctv-backends", "troubleshooting-cctv-backends-nvr"]),
+  openIds: new Set(["home", "how-to", "troubleshooting", "troubleshooting-camera", "troubleshooting-nvr"]),
   query: "",
 };
 
