@@ -96,92 +96,70 @@
                                                        ],
                                           "children":  [
                                                            {
-                                                               "id":  "troubleshooting-cctv",
-                                                               "title":  "CCTV (T)",
-                                                               "summary":  "CCTV troubleshooting.",
+                                                               "id":  "troubleshooting-camera",
+                                                               "title":  "Camera",
+                                                               "summary":  "Camera troubleshooting paths.",
+                                                               "folder":  true,
                                                                "children":  [
                                                                                 {
-                                                                                    "id":  "troubleshooting-cctv-frontends",
-                                                                                    "title":  "Front-Ends",
-                                                                                    "children":  [
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-frontends-123",
-                                                                                                         "title":  "1/2/3 Series",
-                                                                                                         "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-frontends-45678",
-                                                                                                         "title":  "4/5/6/7/8 Series",
-                                                                                                         "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-frontends-ptz",
-                                                                                                         "title":  "PTZ",
-                                                                                                         "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-frontends-analog",
-                                                                                                         "title":  "Analog Camera",
-                                                                                                         "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-thermal",
-                                                                                                         "title":  "Thermal",
-                                                                                                         "folder":  true
-                                                                                                     }
-                                                                                                 ],
+                                                                                    "id":  "troubleshooting-cctv-frontends-123",
+                                                                                    "title":  "1/2/3 Series",
                                                                                     "folder":  true
                                                                                 },
                                                                                 {
-                                                                                    "id":  "troubleshooting-cctv-backends",
-                                                                                    "title":  "Back-Ends",
-                                                                                    "children":  [
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-backends-nvr",
-                                                                                                         "title":  "NVR",
-                                                                                                         "children":  [
-                                                                                                                          {
-                                                                                                                              "id":  "troubleshooting-nvr-time",
-                                                                                                                              "title":  "NVR Time Issue",
-                                                                                                                              "summary":  "Symptoms and suggestions for NVR time reset or 1970 time issues.",
-                                                                                                                              "keywords":  [
-                                                                                                                                               "nvr",
-                                                                                                                                               "time",
-                                                                                                                                               "1970",
-                                                                                                                                               "cmos",
-                                                                                                                                               "battery",
-                                                                                                                                               "chip"
-                                                                                                                                           ],
-                                                                                                                              "sections":  [
-                                                                                                                                               {
-                                                                                                                                                   "title":  "Symptoms and Suggestions",
-                                                                                                                                                   "html":  "\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eSymptom\u003c/th\u003e\u003cth\u003eSuggestion\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eThe time can be saved manually, but changes to 1970 after reboot.\u003c/td\u003e\u003ctd\u003eTry replacing the CMOS battery.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eThe time cannot be saved correctly and always stays at 1970.\u003c/td\u003e\u003ctd\u003eThe chip may be aging.\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e"
-                                                                                                                                               }
-                                                                                                                                           ]
-                                                                                                                          }
-                                                                                                                      ],
-                                                                                                         "folder":  true
-                                                                                                     },
-                                                                                                     {
-                                                                                                         "id":  "troubleshooting-cctv-backends-dvr",
-                                                                                                         "title":  "DVR",
-                                                                                                         "folder":  true
-                                                                                                     }
-                                                                                                 ],
+                                                                                    "id":  "troubleshooting-cctv-frontends-45678",
+                                                                                    "title":  "4/5/6/7/8 Series",
                                                                                     "folder":  true
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-cctv-frontends-ptz",
+                                                                                    "title":  "PTZ",
+                                                                                    "folder":  true
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-cctv-frontends-analog",
+                                                                                    "title":  "Analog Camera",
+                                                                                    "folder":  true
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-cctv-thermal",
+                                                                                    "title":  "Thermal",
+                                                                                    "folder":  true
+                                                                                }
+                                                                            ]
+                                                           },
+                                                           {
+                                                               "id":  "troubleshooting-nvr",
+                                                               "title":  "NVR",
+                                                               "children":  [
+                                                                                {
+                                                                                    "id":  "troubleshooting-nvr-time",
+                                                                                    "title":  "NVR Time Issue",
+                                                                                    "summary":  "Symptoms and suggestions for NVR time reset or 1970 time issues.",
+                                                                                    "keywords":  [
+                                                                                                     "nvr",
+                                                                                                     "time",
+                                                                                                     "1970",
+                                                                                                     "cmos",
+                                                                                                     "battery",
+                                                                                                     "chip"
+                                                                                                 ],
+                                                                                    "sections":  [
+                                                                                                     {
+                                                                                                         "title":  "Symptoms and Suggestions",
+                                                                                                         "html":  "\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eSymptom\u003c/th\u003e\u003cth\u003eSuggestion\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eThe time can be saved manually, but changes to 1970 after reboot.\u003c/td\u003e\u003ctd\u003eTry replacing the CMOS battery.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eThe time cannot be saved correctly and always stays at 1970.\u003c/td\u003e\u003ctd\u003eThe chip may be aging.\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e"
+                                                                                                     }
+                                                                                                 ]
                                                                                 }
                                                                             ],
                                                                "folder":  true
                                                            },
                                                            {
                                                                "id":  "troubleshooting-non-video",
-                                                               "title":  "Non-Video (T)",
+                                                               "title":  "Non-Video",
+                                                               "summary":  "Non-video troubleshooting paths.",
+                                                               "folder":  true,
                                                                "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-speed-gates",
-                                                                                    "title":  "Speed Gates and Turnstiles",
-                                                                                    "folder":  true
-                                                                                },
                                                                                 {
                                                                                     "id":  "troubleshooting-video-intercom",
                                                                                     "title":  "Video Intercom",
@@ -197,57 +175,25 @@
                                                                                     "title":  "Access Control",
                                                                                     "folder":  true
                                                                                 }
-                                                                            ],
-                                                               "folder":  true
-                                                           },
-                                                           {
-                                                               "id":  "troubleshooting-display-control",
-                                                               "title":  "Display \u0026 Control",
-                                                               "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-decoder",
-                                                                                    "title":  "Decoder",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-video-controller",
-                                                                                    "title":  "Video Controller",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-keyboard",
-                                                                                    "title":  "Keyboard",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-led",
-                                                                                    "title":  "LED \u0026 Control System",
-                                                                                    "folder":  true
-                                                                                }
-                                                                            ],
-                                                               "folder":  true
+                                                                            ]
                                                            },
                                                            {
                                                                "id":  "troubleshooting-cloud-software",
                                                                "title":  "Cloud Software",
+                                                               "summary":  "Cloud software troubleshooting paths.",
+                                                               "folder":  true,
                                                                "children":  [
-                                                                                {
-                                                                                    "id":  "troubleshooting-hik-connect-team",
-                                                                                    "title":  "Hik-Connect Team",
-                                                                                    "folder":  true
-                                                                                },
-                                                                                {
-                                                                                    "id":  "troubleshooting-hik-connect-personal",
-                                                                                    "title":  "Hik-Connect Personal",
-                                                                                    "folder":  true
-                                                                                },
                                                                                 {
                                                                                     "id":  "troubleshooting-hik-partner-pro",
                                                                                     "title":  "Hik-Partner Pro",
                                                                                     "folder":  true
+                                                                                },
+                                                                                {
+                                                                                    "id":  "troubleshooting-hik-connect",
+                                                                                    "title":  "Hik-Connect",
+                                                                                    "folder":  true
                                                                                 }
-                                                                            ],
-                                                               "folder":  true
+                                                                            ]
                                                            }
                                                        ],
                                           "folder":  true
