@@ -267,21 +267,148 @@
               ],
               "children": [
                 {
-                  "id": "troubleshooting-nvr-time",
-                  "title": "NVR Time Issue",
-                  "summary": "Symptoms and suggestions for NVR time reset or 1970 time issues.",
+                  "id": "troubleshooting-nvr-ipc-offline",
+                  "title": "IPC Offline",
+                  "summary": "Troubleshooting guidance for IPC disconnection from an NVR, especially power-related disconnection.",
                   "keywords": [
                     "nvr",
-                    "time",
-                    "1970",
-                    "cmos",
-                    "battery",
-                    "chip"
+                    "ipc",
+                    "offline",
+                    "disconnect",
+                    "poe",
+                    "power",
+                    "infrared",
+                    "heater"
                   ],
                   "sections": [
                     {
                       "title": "Details",
-                      "html": "<table><thead><tr><th>Symptom</th><th>Suggestion</th></tr></thead><tbody><tr><td>The time can be saved manually, but changes to 1970 after reboot.</td><td>Try replacing the CMOS battery.</td></tr><tr><td>The time cannot be saved correctly and always stays at 1970.</td><td>The chip may be aging.</td></tr></tbody></table>"
+                      "html": "<ol><li>Check whether the IPC is powered off when it goes offline, and whether it only goes offline in a specific environment. For example, when the IPC enables infrared or the heating module, the required power increases and may cause the IPC to go offline. Disable high-power-consumption functions as appropriate, or power the IPC separately.</li></ol><p>The following checks can help determine whether the issue is power-related:</p><ul><li>If both the PoE indicator and the IPC power indicator are off, it is a power supply issue.</li><li>Compare the channel PoE port power on the NVR local interface with the IPC PoE power. If the difference is very large, it is a power supply issue.</li><li>Power the PoE camera separately and add the camera again. If the image is displayed normally, it is a power supply issue.</li></ul>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-sub-stream",
+                  "title": "Sub-Stream Issues",
+                  "summary": "Sub-stream access limits and stream selection behavior for IPC access.",
+                  "keywords": [
+                    "nvr",
+                    "ipc",
+                    "sub-stream",
+                    "bitrate",
+                    "resolution",
+                    "h264",
+                    "mpeg4",
+                    "mjpeg"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>For IPC sub-stream access, the bitrate must not exceed 2 Mbps and the resolution must not exceed 720p. In this case, reduce the sub-stream bitrate and resolution.</p><p>When a third-party IPC is added, the NVR determines the stream type. The default priority is H.264 &gt; MPEG4 &gt; MJPEG. When the encoding format is the same, streams are sorted by the maximum supported resolution.</p><p>For example, if the IPC main stream is MPEG4 1080p and the sub-stream is H.264 720p, the NVR will use 720p as the main stream. The MPEG4 1080p sub-stream exceeds the resolution limit and cannot be added. When setting the main stream type, use the priority H.264 &gt; MPEG4 &gt; MJPEG.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-hdd",
+                  "title": "HDD Issues",
+                  "summary": "HDD troubleshooting steps including SMART test, SATA cable checks, and power supply checks.",
+                  "keywords": [
+                    "nvr",
+                    "hdd",
+                    "hard disk",
+                    "smart",
+                    "sata",
+                    "power supply",
+                    "reallocated sector count"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>When an HDD issue occurs, perform a SMART test first.</p><h3>SMART Test</h3><p>If the SMART test shows an abnormal result, replace the HDD. The SMART test can be performed on the NVR local interface. If the device has not created a RAID array, the SMART test can also be performed from the web interface.</p><p>If `self-evaluation` fails, the HDD has not passed the SMART test. Pay close attention to `Reallocated Sector Count`. If the value is `1`, it means the HDD is currently in the worst condition. In this case, replace the HDD, perform SMART tests on the remaining disks, and replace any problematic HDDs in time.</p><h3>SATA Cable Check</h3><p>Cross-check the SATA cables. For example, swap the third cable with the fourth cable, and the first cable with the fifth cable. If the offline HDD slot changes after swapping the SATA cable, replace the SATA cable.</p><h3>Power Supply Check</h3><p>Check whether the HDD is spinning and whether the HDD indicator on the front panel is lit.</p><p>If the HDD is not spinning and the HDD indicator on the front panel is not lit, it can be determined that the HDD power supply is abnormal.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-smart-event-search",
+                  "title": "Smart Event Search",
+                  "summary": "Conditions required for Smart Event Search for motion detection, line crossing, and intrusion events.",
+                  "keywords": [
+                    "nvr",
+                    "smart event search",
+                    "vca",
+                    "dual-vca",
+                    "motion detection",
+                    "line crossing",
+                    "intrusion"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Smart Event Search can search the following event types: motion detection, line crossing, and intrusion detection.</p><p>On the device local interface, `Save Camera VCA Data` must be enabled in the storage module. For line crossing and intrusion detection, `Dual-VCA` must be enabled. After it is enabled, Smart Event Search can be used regardless of whether the event itself is enabled.</p><p>Motion detection is special. The motion detection event must be enabled on the device, and `Enable Dynamic Analysis for Motion` must also be enabled, but `Dual-VCA` does not need to be enabled.</p><h3>Information Collection</h3><ul><li>Confirm whether `Save Camera VCA Data` is enabled on the local interface.</li></ul><p>GUI:</p><p><img class=\"article-image\" src=\"assets/images/nvr/nvr-doc-image-01.png\" alt=\"Save Camera VCA Data setting\"></p><ul><li>Confirm whether the motion detection event is enabled, and whether `Enable Dynamic Analysis for Motion` is enabled.</li></ul><p><img class=\"article-image\" src=\"assets/images/nvr/nvr-doc-image-02.png\" alt=\"Enable Dynamic Analysis for Motion setting\"></p><ul><li>Confirm whether `Dual-VCA` is enabled on the camera. In most cases, it is not enabled on the camera side, which causes intrusion detection and line crossing to fail.</li></ul><p><img class=\"article-image\" src=\"assets/images/nvr/nvr-doc-image-03.png\" alt=\"Dual-VCA setting\"></p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-missing-recording",
+                  "title": "Missing Recording",
+                  "summary": "Common causes of missing recordings on Hikvision NVRs.",
+                  "keywords": [
+                    "nvr",
+                    "recording",
+                    "missing",
+                    "group",
+                    "time sync",
+                    "expire time",
+                    "overwrite"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>Hikvision NVRs do not have a function to actively delete recordings.</p><p>Common situations include:</p><ul><li>When configuring a group, the channel was not selected.</li></ul><p><img class=\"article-image\" src=\"assets/images/nvr/nvr-doc-image-04.png\" alt=\"Group channel selection\"></p><ul><li>Recording loss caused by multiple devices synchronizing time to the NVR.</li></ul><p>If multiple platforms and multiple devices are connected for time synchronization, recording loss may occur. Advise the customer to disable time synchronization from other devices, then check and reconfigure the settings.</p><ul><li>Recording loss caused by `expire time` / `overwrite` settings.</li></ul><p>If `expiry time` is configured, recordings will expire. If HDD overwrite is enabled, when the disk is full, the HDD will start overwriting recordings from the earliest recording log.</p>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-preview-playback-black-screen",
+                  "title": "Preview/Playback Failed",
+                  "summary": "Troubleshooting guidance for remote preview or playback failure and black screen issues.",
+                  "keywords": [
+                    "nvr",
+                    "preview",
+                    "playback",
+                    "failed",
+                    "black screen",
+                    "tcp",
+                    "udp",
+                    "multicast",
+                    "plugin",
+                    "firewall"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<p>It is recommended to switch the protocol first.</p><p>During NVR remote preview, the protocol can be selected from TCP, UDP, and Multicast. If the user has high real-time requirements, use UDP. If the user has high integrity requirements, use TCP. Try switching the protocol first.</p><p>Sometimes the router or PC firewall restricts TCP connections. Try increasing the TCP wait time on the router, canceling TCP blocking, or directly switching to UDP.</p><p>If switching the protocol does not resolve the issue:</p><ul><li>Uninstall the plugin, log in to the device web interface again, and reinstall the plugin.</li><li>Reduce the number of users pulling streams.</li><li>Check the antivirus software or firewall blocking records. Disable the antivirus software or firewall and compare the result.</li></ul>"
+                    }
+                  ]
+                },
+                {
+                  "id": "troubleshooting-nvr-system-time",
+                  "title": "System Time",
+                  "summary": "Troubleshooting guidance for NVR time/date staying at 1970, timezone changes, and PC time synchronization timezone mismatch.",
+                  "keywords": [
+                    "nvr",
+                    "system time",
+                    "1970",
+                    "button battery",
+                    "crystal oscillator",
+                    "timezone",
+                    "gmt",
+                    "dst"
+                  ],
+                  "sections": [
+                    {
+                      "title": "Details",
+                      "html": "<h3>Time and Date Always Stay at 1970-01-01</h3><p>Button battery failure: The button battery has a service life. When the battery is depleted, it must be replaced. This is especially common for devices that have been kept in stock for a long time.</p><p>The function of the button battery is to provide power and form a minimal time synchronization system. When the NVR is powered off, the clock can still keep running and maintain accurate time. Therefore, in this situation, the time can usually be saved manually, but after reboot it changes back to 1970.</p><p>If the time cannot be saved correctly and always stays at 1970, the crystal oscillator may have failed.</p><h3>NVR Timezone Changes from a Specific Value to GMT+00:00</h3><p>The timezone changes from a specific value to GMT+00:00.</p><p>Check the NVR system log to see whether the timezone was modified by a remote IP address. Then use the IP address to identify the modification source.</p><h3>PC Time Synchronization Causes NVR Timezone Mismatch</h3><p>After synchronizing the PC time from the NVR web interface, the NVR timezone information is inconsistent with the PC timezone.</p><p>Disable `Adjust for daylight saving time automatically` on the PC. If daylight saving time needs to be used on the NVR, configure it on the NVR DST page.</p>"
                     }
                   ]
                 }
