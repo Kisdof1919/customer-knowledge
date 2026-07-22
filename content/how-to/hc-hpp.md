@@ -10,4 +10,7 @@ downloads:
   - title: Submit Password and Unbind Case in EU
     type: PDF
     href: files/how-to/three-ways-to-submit-password-and-unbind-case-eu.pdf
+  - title: Upgrade HikCentral Connect Account to Hik-Connect for Team Account
+    type: PDF
+    href: files/how-to/upgrade-hikcentral-connect-to-hik-connect-team.pdf
 ---
