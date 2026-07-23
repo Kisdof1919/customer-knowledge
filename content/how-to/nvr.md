@@ -22,4 +22,7 @@ downloads:
   - title: Configure VCA of the NVR
     type: PDF
     href: files/how-to/configure-vca-of-nvr.pdf
+  - title: Configure People Falling Down Detection on AIOP DeepinMind NVR
+    type: PDF
+    href: files/how-to/configure-people-falling-down-detection-on-aiop-deepinmind-nvr.pdf
 ---

@@ -10,4 +10,10 @@ downloads:
   - title: Use Thermal Design Tool
     type: PDF
     href: files/how-to/use-thermal-design-tool.pdf
+  - title: Configure Linkage Tracking for Thermal PT Cameras
+    type: PDF
+    href: files/how-to/configure-linkage-tracking-for-thermal-pt-cameras.pdf
+  - title: Configure Perimeter Protection for Panoramic Scanner
+    type: PDF
+    href: files/how-to/configure-perimeter-protection-for-panoramic-scanner.pdf
 ---
